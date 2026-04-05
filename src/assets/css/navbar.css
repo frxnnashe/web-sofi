@@ -1,0 +1,153 @@
+/* ===== NAVBAR SOF ===== */
+.sof-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--white);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sof-navbar.scrolled {
+  border-color: var(--gray-mid);
+  box-shadow: var(--shadow-sm);
+}
+
+.sof-navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+/* Logo tipográfico */
+.sof-logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.sof-logo-main {
+  font-family: var(--font-title);
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--primary);
+}
+
+.sof-logo-sub {
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dark);
+  opacity: 0.6;
+  margin-top: 2px;
+}
+
+/* Nav links */
+.sof-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  list-style: none;
+}
+
+.sof-nav-links a {
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--dark);
+  opacity: 0.75;
+  transition: opacity 0.2s, color 0.2s;
+  position: relative;
+}
+
+.sof-nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary);
+  transition: width 0.25s ease;
+}
+
+.sof-nav-links a:hover {
+  opacity: 1;
+  color: var(--primary);
+}
+.sof-nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Hamburger */
+.sof-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.sof-hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--dark);
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Mobile menu */
+.sof-mobile-menu {
+  display: none;
+  flex-direction: column;
+  gap: 0;
+  background-color: var(--white);
+  border-top: 1px solid var(--gray-mid);
+  padding: 16px 0;
+}
+
+.sof-mobile-menu.open {
+  display: flex;
+}
+
+.sof-mobile-menu a {
+  padding: 14px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--dark);
+  opacity: 0.8;
+  transition: background 0.2s, opacity 0.2s;
+  border-bottom: 1px solid var(--gray-light);
+}
+
+.sof-mobile-menu a:hover {
+  opacity: 1;
+  background-color: var(--gray-light);
+  color: var(--primary);
+}
+
+.sof-mobile-cta {
+  margin: 16px 24px 4px;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .sof-nav-links,
+  .sof-navbar-cta {
+    display: none;
+  }
+  .sof-hamburger {
+    display: flex;
+  }
+}

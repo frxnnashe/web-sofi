@@ -1,0 +1,149 @@
+/* ===== AUTORIDAD Y CONFIANZA SOF ===== */
+.autoridad-section {
+  background-color: var(--dark);
+  color: var(--white);
+}
+
+.autoridad-section .section-label {
+  color: rgba(38, 145, 161, 0.85);
+}
+
+.autoridad-section .section-title {
+  color: var(--white);
+}
+
+.autoridad-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.autoridad-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 32px 28px;
+  transition: background-color var(--transition), border-color var(--transition);
+}
+
+.autoridad-card:hover {
+  background-color: rgba(38, 145, 161, 0.1);
+  border-color: rgba(38, 145, 161, 0.4);
+}
+
+.autoridad-card-icon {
+  width: 48px;
+  height: 48px;
+  background-color: rgba(38, 145, 161, 0.15);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: var(--primary-light);
+  margin-bottom: 20px;
+}
+
+.autoridad-card-title {
+  font-family: var(--font-title);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.autoridad-card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.autoridad-card ul li {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  padding-left: 16px;
+  position: relative;
+}
+
+.autoridad-card ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--primary-light);
+}
+
+/* Logos institucionales */
+.autoridad-logos {
+  margin-top: 56px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.autoridad-logos-title {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.autoridad-logos-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.logo-placeholder-inst {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.55;
+  transition: opacity 0.2s;
+}
+
+.logo-placeholder-inst:hover {
+  opacity: 0.9;
+}
+
+.logo-placeholder-box {
+  width: 80px;
+  height: 56px;
+  border: 1.5px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.logo-placeholder-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width: 900px) {
+  .autoridad-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}

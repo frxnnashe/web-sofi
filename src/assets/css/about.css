@@ -1,0 +1,96 @@
+/* ===== ABOUT SOF ===== */
+.about-section {
+  background-color: var(--gray-light);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+
+.about-image-wrap {
+  position: relative;
+}
+
+.about-image-wrap img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  display: block;
+}
+
+.about-badge {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  box-shadow: var(--shadow-md);
+  font-family: var(--font-title);
+}
+
+.about-badge-num {
+  font-size: 1.8rem;
+  font-weight: 700;
+  display: block;
+  line-height: 1;
+}
+
+.about-badge-text {
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  opacity: 0.85;
+}
+
+/* Texto */
+.about-text p {
+  font-size: 0.98rem;
+  color: var(--dark-mid);
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+.about-text p:first-of-type {
+  font-size: 1.06rem;
+  color: var(--dark);
+}
+
+.about-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 24px 0;
+}
+
+.about-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border: 1.5px solid var(--primary);
+  border-radius: 40px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--primary);
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .about-badge {
+    bottom: 12px;
+    right: 12px;
+  }
+  .about-image-wrap img {
+    height: 300px;
+  }
+}
