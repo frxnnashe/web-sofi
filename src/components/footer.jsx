@@ -2,7 +2,7 @@ import React from "react";
 import "../assets/css/footer.css";
 import "../assets/css/styles.css";
 
-const WA_LINK = "https://wa.me/3516612084?text=Hola%20Sof%C3%ADa%2C%20quisiera%20consultar%20valores%20y%20turnos";
+const WA_LINK = "https://wa.me/3516612084?text=Hola%20Sof!";
 const IG_LINK = "https://instagram.com/lic.sof";
 
 export default function Footer() {
@@ -89,6 +89,13 @@ export default function Footer() {
               351-6612084
             </a>
             <a
+              href="mailto:lauuburgos18@gmail.com"
+              className="footer-contact-item"
+            >
+              <span className="footer-contact-icon">✉️</span>
+              lauuburgos18@gmail.com
+            </a>
+            <a
               href={IG_LINK}
               target="_blank"
               rel="noopener noreferrer"
@@ -108,7 +115,10 @@ export default function Footer() {
 
         <div className="footer-bottom">
           <span className="footer-copy">
-            © 2025 Lic. Sofía Burgos — SOF Kinesiología y Osteopatía. Todos los derechos reservados.
+            © 2025 Lic. Sofía Burgos — SOF Kinesiología y Osteopatía. Todos los derechos reservados.{" "}
+            <span style={{ opacity: 0.8, marginLeft: "12px", borderLeft: "1px solid rgba(255,255,255,0.3)", paddingLeft: "12px" }}>
+              Desarrollado por <a href="https://wa.me/3541221485" target="_blank" rel="noopener noreferrer" style={{ color: "var(--primary)", fontWeight: "500" }}>Francisco Rocchia</a>
+            </span>
           </span>
           <span className="footer-legal">
             Ejercicio profesional habilitado · Matrícula vigente

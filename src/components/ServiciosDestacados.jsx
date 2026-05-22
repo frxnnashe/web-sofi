@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import "../assets/css/ServiciosDestacados.css";
 import "../assets/css/styles.css";
 
-const WA_LINK = "https://wa.me/3516612084?text=Hola%20Sof%C3%ADa%2C%20quisiera%20consultar%20valores%20y%20turnos";
+const WA_LINK = "https://wa.me/3516612084?text=Hola%20Sof!";
 
 const servicios = [
   {
@@ -12,10 +12,10 @@ const servicios = [
     subtitle: "Rehabilitación del movimiento",
     desc: "La kinesiología estudia y trata las alteraciones del movimiento humano a través de técnicas manuales, ejercicio terapéutico y educación postural. Aborda desde lesiones deportivas y musculoesqueléticas hasta rehabilitación post-quirúrgica.",
     duracion: "40 minutos por sesión",
-    placeholder: null,
+    placeholder: "La kinesiología utiliza el movimiento, el ejercicio terapéutico y diversas técnicas físicas para curar, prevenir y recuperar la funcionalidad del cuerpo. Es un pilar fundamental para restaurar la movilidad sin dolor y mejorar la calidad de vida.",
   },
   {
-    icon: "🌿",
+    icon: "🧠",
     title: "Osteopatía",
     subtitle: "Equilibrio integral del cuerpo",
     desc: "La osteopatía es una medicina manual que evalúa y trata restricciones de movilidad en articulaciones, tejidos blandos, fascias, vísceras y sistema cráneo-sacro. Su enfoque es global: entiende el cuerpo como una unidad funcional donde todo está interconectado.",
@@ -52,6 +52,11 @@ export default function ServiciosDestacados() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: i * 0.15 }}
               viewport={{ once: true }}
+              whileHover={{ 
+                y: -8, 
+                boxShadow: "0 15px 30px rgba(38, 145, 161, 0.12)",
+                borderColor: "#2691a1" 
+              }}
             >
               <div className="servicio-icon">{s.icon}</div>
               <div className="servicio-subtitle">{s.subtitle}</div>
@@ -66,17 +71,19 @@ export default function ServiciosDestacados() {
                 </span>
               </div>
 
-              {/* Placeholder ¿Qué es la osteopatía? — solo en tarjeta Osteopatía */}
+              {/* Placeholder ¿Qué es? */}
               {s.placeholder && (
                 <div className="servicio-placeholder">
                   <span className="servicio-placeholder-label">
-                    ¿Qué es la osteopatía?
+                    ¿Qué es la {s.title.toLowerCase()}?
                   </span>
                   <p>{s.placeholder}</p>
                 </div>
               )}
 
-              <a
+              <motion.a
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 href={WA_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -84,7 +91,7 @@ export default function ServiciosDestacados() {
                 style={{ marginTop: "20px" }}
               >
                 Consultar turno →
-              </a>
+              </motion.a>
             </motion.div>
           ))}
         </div>

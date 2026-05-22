@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import "../assets/css/ubicacion.css";
 import "../assets/css/styles.css";
 
-const WA_LINK = "https://wa.me/3516612084?text=Hola%20Sof%C3%ADa%2C%20quisiera%20consultar%20valores%20y%20turnos";
+const WA_LINK = "https://wa.me/3516612084?text=Hola%20Sof!";
 const IG_LINK = "https://instagram.com/lic.sof";
 
 const ubicaciones = [
@@ -27,14 +27,6 @@ const ubicaciones = [
     address: "Echavarría 69, Córdoba",
     tag: "Centro de rehabilitación",
     proxima: false,
-  },
-  // Próximamente — dejar preparado
-  {
-    icon: "🗺️",
-    name: "La Cumbre",
-    address: "Próximamente — Agosto / Octubre 2025",
-    tag: "Próximamente",
-    proxima: true,
   },
 ];
 
@@ -79,6 +71,7 @@ export default function Ubicacion() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               viewport={{ once: true }}
+              whileHover={u.proxima ? {} : { y: -6, boxShadow: "0 12px 24px rgba(0,0,0,0.08)", borderColor: "#2691a1" }}
             >
               <div className="ubicacion-card-icon">{u.icon}</div>
               <div className="ubicacion-card-name">{u.name}</div>

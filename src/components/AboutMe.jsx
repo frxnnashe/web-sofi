@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import "../assets/css/about.css";
 import "../assets/css/styles.css";
 
-const WA_LINK = "https://wa.me/3516612084?text=Hola%20Sof%C3%ADa%2C%20quisiera%20consultar%20valores%20y%20turnos";
+const WA_LINK = "https://wa.me/3516612084?text=Hola%20Sof!";
 
 const fadeIn = {
   hidden: { opacity: 0, x: -30 },
@@ -23,7 +23,7 @@ export default function AboutMe() {
             viewport={{ once: true }}
           >
             <img
-              src="/sofia-placeholder.png"
+              src="/sofgpt2.webp"
               alt="Lic. Sofía Burgos — Kinesióloga y Osteópata"
             />
           </motion.div>
@@ -61,17 +61,23 @@ export default function AboutMe() {
             <p>
               Hoy trabajo desde la <strong>fusión de ambas disciplinas</strong>.
               No es kinesiología más osteopatía sumadas; es un nuevo abordaje
-              donde una potenencia a la otra, orientando cada sesión hacia la
+              donde una potencia a la otra, orientando cada sesión hacia la
               rehabilitación genuina a través del movimiento y la integración
-              mente-cuerpo-alma.
+              mente-cuerpo-alma. Por esta misma inquietud de comprender
+              al ser humano en su totalidad, actualmente soy <strong>Estudiante de Psicología</strong> en la Universidad Nacional de Córdoba (UNC).
+            </p>
+
+            <p>
+              Fuera del consultorio, mi lado humano se nutre del arte y la vocación de servicio: soy <strong>apasionada por cantar</strong>, transmitiendo emociones a través de la música, y avanzando firme con el sueño en curso de recibirme de psicóloga.
             </p>
 
             <div className="about-highlights">
               {[
                 "🎓 Kinesióloga UNC",
                 "🧠 Especialización en Osteopatía",
+                "📚 Estudiante de Psicología UNC",
+                "🎵 Apasionada por cantar",
                 "📍 Cachi, Salta → Córdoba",
-                "💡 Enfoque holístico e integral",
               ].map((tag) => (
                 <span className="about-tag" key={tag}>
                   {tag}

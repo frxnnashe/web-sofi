@@ -1,0 +1,121 @@
+/* ===== TESTIMONIOS ===== */
+.testimonios-header {
+  text-align: center;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonios-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.testimonio-card {
+  background-color: var(--white);
+  border-radius: var(--radius);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border: 1px solid var(--gray-mid);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+@media (min-width: 768px) {
+  .testimonio-card {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.testimonio-content {
+  flex: 1;
+  position: relative;
+}
+
+.testimonio-icon {
+  font-size: 5rem;
+  color: var(--primary);
+  opacity: 0.15;
+  line-height: 0;
+  position: absolute;
+  top: 10px;
+  left: -15px;
+  font-family: serif;
+}
+
+.testimonio-text {
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--dark-mid);
+  line-height: 1.8;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 24px;
+}
+
+.testimonio-author {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonio-author strong {
+  font-family: var(--font-title);
+  font-size: 1.2rem;
+  color: var(--dark);
+}
+
+.testimonio-author span {
+  font-size: 0.85rem;
+  color: var(--gray-text);
+  margin-top: 2px;
+}
+
+.testimonio-images {
+  display: flex;
+  gap: 20px;
+  flex: 0 0 auto;
+}
+
+.testimonio-img {
+  width: 160px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease;
+}
+
+.testimonio-img:hover {
+  transform: scale(1.03);
+}
+
+@media (max-width: 600px) {
+  .testimonio-images {
+    flex-direction: row;
+    gap: 12px;
+    width: 100%;
+  }
+  .testimonio-img {
+    flex: 1;
+    width: auto;
+    height: 240px;
+    max-height: none;
+  }
+}
+@media (max-width: 400px) {
+  .testimonio-images {
+    flex-direction: column;
+  }
+  .testimonio-img {
+    width: 100%;
+    height: auto;
+    min-height: 250px;
+  }
+}

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import "../assets/css/hero.css";
 import "../assets/css/styles.css";
 
-const WA_LINK = "https://wa.me/3516612084?text=Hola%20Sof%C3%ADa%2C%20quisiera%20consultar%20valores%20y%20turnos";
+const WA_LINK = "https://wa.me/3516612084?text=Hola%20Sof!";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
@@ -62,17 +62,24 @@ export default function HeroSection() {
               custom={0.55}
               variants={fadeUp}
             >
-              <a
+              <motion.a
+                whileHover={{ scale: 1.05, boxShadow: "0 8px 20px rgba(38,145,161,0.3)" }}
+                whileTap={{ scale: 0.95 }}
                 href={WA_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-sof btn-sof-primary"
               >
                 💬 Consultar Valores y Turnos
-              </a>
-              <a href="#servicios" className="btn-sof btn-sof-outline">
+              </motion.a>
+              <motion.a 
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                href="#servicios" 
+                className="btn-sof btn-sof-outline"
+              >
                 Ver Servicios →
-              </a>
+              </motion.a>
             </motion.div>
           </div>
 
@@ -82,11 +89,13 @@ export default function HeroSection() {
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            whileHover={{ scale: 1.02 }}
           >
             <div className="hero-image-bg" />
             <img
-              src="/sofia-placeholder.png"
-              alt="Lic. Sofía Burgos — Kinesióloga y Osteópata"
+              src="/sofgpt.webp"
+              alt="Lic. Sofía Burgos"
+              className="hero-image"
             />
           </motion.div>
         </div>

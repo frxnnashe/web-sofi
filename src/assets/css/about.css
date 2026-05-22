@@ -49,6 +49,29 @@
 }
 
 /* Texto */
+.about-text {
+  position: relative;
+  z-index: 1;
+}
+
+.about-text::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 660px;
+  height: 580px;
+  background-image: url('/cachi-mountains.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.85;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: 50%;
+  mask-image: radial-gradient(circle, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 65%);
+  -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 65%);
+}
+
 .about-text p {
   font-size: 0.98rem;
   color: var(--dark-mid);
