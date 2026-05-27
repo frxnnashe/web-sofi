@@ -10,7 +10,7 @@ const servicios = [
     icon: "🦴",
     title: "Kinesiología",
     subtitle: "Rehabilitación del movimiento",
-    desc: "La kinesiología estudia y trata las alteraciones del movimiento humano a través de técnicas manuales, ejercicio terapéutico y educación postural. Aborda desde lesiones deportivas y musculoesqueléticas hasta rehabilitación post-quirúrgica.",
+    desc: "La kinesiología estudia y trata las alteraciones del movimiento humano a través de técnicas manuales, ejercicio terapéutico y educación y re educación sensomotora postural. Aborda desde lesiones deportivas y musculoesqueléticas hasta rehabilitación post-quirúrgica.",
     duracion: "40 minutos por sesión",
     placeholder: "La kinesiología utiliza el movimiento, el ejercicio terapéutico y diversas técnicas físicas para curar, prevenir y recuperar la funcionalidad del cuerpo. Es un pilar fundamental para restaurar la movilidad sin dolor y mejorar la calidad de vida.",
   },
@@ -18,10 +18,26 @@ const servicios = [
     icon: "🧠",
     title: "Osteopatía",
     subtitle: "Equilibrio integral del cuerpo",
-    desc: "La osteopatía es una medicina manual que evalúa y trata restricciones de movilidad en articulaciones, tejidos blandos, fascias, vísceras y sistema cráneo-sacro. Su enfoque es global: entiende el cuerpo como una unidad funcional donde todo está interconectado.",
+    desc: "La osteopatía es una medicina manual que evalúa y trata restricciones de movilidad en articulaciones, tejidos blandos, fascias, vísceras y sistema cráneo-sacro. Su enfoque es global: es un abordaje holístico integral que busca la interconexión e integridad del ser y el ambiente.",
     duracion: "40 minutos por sesión",
     placeholder:
-      "A través de técnicas manuales precisas, el osteópata identifica y libera tensiones que el cuerpo acumula como respuesta al estrés, traumas o posturas sostenidas en el tiempo. Trabaja sobre la causa, no solo sobre el síntoma.",
+      "A través de técnicas manuales precisas, el osteópata identifica y libera tensiones que el cuerpo acumula como respuesta al estrés, traumas o posturas sostenidas en el tiempo. Trabaja sobre la causa, no solo sobre el síntoma. ",
+    musica: {
+      titulo: "Un toque Osteopático — Sofía Burgos",
+      letra: `Una vez vino Still y me dijo que no olvide
+Que somos cuerpo alma y mente
+Con osteopatía aprendí la escucha general y local
+Que analice las cadenas relacione los sistemas
+Las veces que yo quiera
+Cuando yo era kine mi vida era simple
+Hasta que tope con cadenas
+Eslabones agonistas antagonistas
+Ja, simples sinergistas
+Ahora estamos somos varios manifestando el nuevo enfoque
+Holística integral con técnicas manuales
+Buscando, movilidad e integridad`,
+      reel: "https://www.instagram.com/reel/DDXk9pzISFz/?igsh=NTgyMjB3M2ozNjBl"
+    }
   },
 ];
 
@@ -78,6 +94,21 @@ export default function ServiciosDestacados() {
                     ¿Qué es la {s.title.toLowerCase()}?
                   </span>
                   <p>{s.placeholder}</p>
+                </div>
+              )}
+
+              {/* Música y Reel para Osteopatía */}
+              {s.musica && (
+                <div className="servicio-musica" style={{ marginTop: "24px", padding: "16px", backgroundColor: "var(--dark-light)", borderRadius: "8px", borderLeft: "4px solid var(--primary)", textAlign: "left" }}>
+                  <h4 style={{ fontSize: "1rem", color: "var(--light)", marginBottom: "12px", display: "flex", alignItems: "center", gap: "8px" }}>
+                    🎵 {s.musica.titulo}
+                  </h4>
+                  <pre style={{ whiteSpace: "pre-wrap", fontFamily: "var(--font-body)", fontSize: "0.85rem", color: "var(--gray-text)", lineHeight: "1.5", marginBottom: "16px" }}>
+                    {s.musica.letra}
+                  </pre>
+                  <a href={s.musica.reel} target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "8px", fontSize: "0.85rem", padding: "8px 12px", backgroundColor: "#E1306C", color: "white", borderRadius: "20px", fontWeight: "500", textDecoration: "none" }}>
+                    <span style={{ fontSize: "1.1rem" }}>📸</span> Ver el Reel en Instagram
+                  </a>
                 </div>
               )}
 

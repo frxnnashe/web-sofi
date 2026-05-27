@@ -8,13 +8,6 @@ const IG_LINK = "https://instagram.com/lic.sof";
 
 const ubicaciones = [
   {
-    icon: "🏥",
-    name: "Consultorio Privado",
-    address: "Villa Carlos Paz, Córdoba",
-    tag: "Consultorio propio",
-    proxima: false,
-  },
-  {
     icon: "📍",
     name: "LATAY",
     address: "Int. García 123, Villa Carlos Paz, Córdoba",

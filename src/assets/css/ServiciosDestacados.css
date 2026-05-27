@@ -1,6 +1,47 @@
 /* ===== SERVICIOS SOF ===== */
 .servicios-section {
-  background-color: var(--white);
+  position: relative;
+  background: var(--white);
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Fondo limpio blanco — la base profesional */
+.servicios-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #ffffff 0%, #f6fcfc 100%);
+  z-index: -2;
+}
+
+/* Nota musical grande y sutil — estilo Cachi (marca de agua difuminada) */
+.servicios-section::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -80px;
+  transform: translateY(-50%);
+  width: 600px;
+  height: 600px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'%3E%3Cpath d='M180,400 A50,40 0 1,1 130,360 L130,80 L300,40 L300,320 A50,40 0 1,1 250,280 L250,80 L145,110 L145,360' fill='rgba(38,145,161,0.12)' stroke='rgba(38,145,161,0.18)' stroke-width='3'/%3E%3Ccircle cx='95' cy='150' r='6' fill='rgba(38,145,161,0.1)'/%3E%3Ccircle cx='340' cy='200' r='4' fill='rgba(38,145,161,0.08)'/%3E%3Ccircle cx='200' cy='450' r='5' fill='rgba(38,145,161,0.06)'/%3E%3Cpath d='M60,200 Q120,180 100,220 T160,210' fill='none' stroke='rgba(38,145,161,0.08)' stroke-width='2'/%3E%3Cpath d='M280,380 Q320,360 340,400 T380,380' fill='none' stroke='rgba(38,145,161,0.08)' stroke-width='2'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.85;
+  mask-image: radial-gradient(circle, rgba(0,0,0,1) 15%, rgba(0,0,0,0) 65%);
+  -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 15%, rgba(0,0,0,0) 65%);
+  animation: floatMusic 20s ease-in-out infinite alternate;
+}
+
+@keyframes floatMusic {
+  0% { transform: translateY(-50%) translateX(0); }
+  100% { transform: translateY(-52%) translateX(-15px); }
 }
 
 .servicios-grid {
@@ -8,10 +49,16 @@
   grid-template-columns: 1fr 1fr;
   gap: 28px;
   margin-top: 48px;
+  position: relative;
+  z-index: 2;
 }
 
 .servicio-card {
-  border: 1.5px solid var(--gray-mid);
+  background-color: rgba(255, 255, 255, 0.85); /* Semitransparente */
+  backdrop-filter: blur(12px); /* Glassmorphism */
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 12px 30px rgba(38, 145, 161, 0.08); /* Sombra integrada viva */
   border-radius: 16px;
   padding: 40px 36px;
   transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
@@ -139,5 +186,23 @@
   }
   .servicio-card {
     padding: 28px 24px;
+  }
+  /* Nota musical centrada y adaptada a móviles */
+  .servicios-section::after {
+    top: auto;
+    bottom: -40px;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px;
+    height: 320px;
+    mask-image: radial-gradient(circle, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 60%);
+    -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 60%);
+    animation: floatMusicMobile 20s ease-in-out infinite alternate;
+  }
+
+  @keyframes floatMusicMobile {
+    0% { transform: translateX(-50%) translateY(0); }
+    100% { transform: translateX(-50%) translateY(-10px); }
   }
 }

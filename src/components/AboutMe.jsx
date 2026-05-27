@@ -68,14 +68,13 @@ export default function AboutMe() {
             </p>
 
             <p>
-              Fuera del consultorio, mi lado humano se nutre del arte y la vocación de servicio: soy <strong>apasionada por cantar</strong>, transmitiendo emociones a través de la música, y avanzando firme con el sueño en curso de recibirme de psicóloga.
+              En la postura se reflejan múltiples factores que hacen interferencia, el dolor es proyectivo, pertenecemos a una masa, somos seres biopsicosociales, somos colectivo y holístico. En la postura se expresa la historia personal y el vínculo con los otros. Encontrarse con tu cuerpo libre y suelto es lo que busca esta terapia, ofreciendo calidad de vida.
             </p>
 
             <div className="about-highlights">
               {[
                 "🎓 Kinesióloga UNC",
                 "🧠 Especialización en Osteopatía",
-                "📚 Estudiante de Psicología UNC",
                 "🎵 Apasionada por cantar",
                 "📍 Cachi, Salta → Córdoba",
               ].map((tag) => (

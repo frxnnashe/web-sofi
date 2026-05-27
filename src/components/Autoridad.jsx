@@ -145,7 +145,7 @@ export default function Autoridad() {
             <ul>
               <li>Matriculada en el Colegio de Kinesiólogos de la Provincia de Córdoba</li>
               <li>Inscripción vigente ante AFIP — Facturación oficial</li>
-              <li>Miembro de FOTEM — Fundación Osteopática y Terapias Manuales</li>
+              <li>FOTEM — Fundación Osteopática y Terapias Manuales</li>
               <li>Ejercicio profesional autorizado y en plena vigencia</li>
             </ul>
             <div style={{ marginTop: "24px", padding: "16px", backgroundColor: "var(--dark)", borderRadius: "8px", border: "1px solid var(--gray-mid)" }}>
